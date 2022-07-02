@@ -13,7 +13,7 @@ class Provinsi extends Model
      * @var array
      */
     protected $fillable = [
-        'key','value','file'
+        'id','key','value','file'
     ];
 
 } 

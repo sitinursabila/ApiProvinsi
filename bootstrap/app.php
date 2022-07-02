@@ -71,7 +71,9 @@ $app->configure('app');
 | route or middleware that'll be assigned to some specific routes.
 |
 */
-
+$app->singleton('filesystem', function ($app) {
+    return $app->loadComponent('filesystems', 'Illuminate\Filesystem\FilesystemServiceProvider', 'filesystem');
+});
 // $app->middleware([
 //     App\Http\Middleware\ExampleMiddleware::class
 // ]);
